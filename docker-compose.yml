@@ -1,0 +1,30 @@
+name: incremental-sync-with-airbyte-and-dbezium
+
+services:
+  db_source:
+    build:
+      context: .
+      dockerfile: dockerfile.source
+    image: db_source:dev
+    container_name: db_source
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+
+  db_destination:
+    build:
+      context: .
+      dockerfile: dockerfile.destination
+    image: db_destination:dev
+    container_name: db_destination
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "5434:5432"
+    restart: unless-stopped    
