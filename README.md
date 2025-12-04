@@ -7,7 +7,7 @@ Este projeto demonstra como implementar uma pipeline de **sincronização increm
 ## 🎯 Objetivo
 
 Implementar uma solução de sincronização incremental usando:
-- **PostgreSQL**
+- **PostgreSQL** como banco de dados fonte e destino
 - **Airbyte** para orquestração e sincronização de dados
 - **Docker** para ambiente de desenvolvimento isolado e reproduzível
 - **Modos de Sync**: Full Refresh, Incremental Append e Incremental Append + Deduplication
