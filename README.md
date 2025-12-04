@@ -1,13 +1,13 @@
 # 🔄 Incremental Sync with Airbyte and Debezium
 
-> **Demonstração prática de Sincronização Incremental usando PostgreSQL, Debezium e Airbyte**
+> **Demonstração prática de Sincronização Incremental usando PostgreSQL e Airbyte**
 
 Este projeto demonstra como implementar uma pipeline de **sincronização incremental** para replicar mudanças de um banco de dados PostgreSQL de origem para um banco de dados PostgreSQL de destino. Utilizamos o **Airbyte** para orquestrar a sincronização dos dados com diferentes modos de sync.
 
 ## 🎯 Objetivo
 
 Implementar uma solução de sincronização incremental usando:
-- **PostgreSQL** com **Debezium** para captura de mudanças
+- **PostgreSQL**
 - **Airbyte** para orquestração e sincronização de dados
 - **Docker** para ambiente de desenvolvimento isolado e reproduzível
 - **Modos de Sync**: Full Refresh, Incremental Append e Incremental Append + Deduplication
